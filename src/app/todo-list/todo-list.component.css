@@ -1,0 +1,13 @@
+.todo-list {
+  display: grid;
+  row-gap: 14px;
+}
+
+/* 拖拽效果的样式 */
+.dragging {
+  opacity: 0.5;
+}
+
+.over {
+  border: 2px dashed #777;
+}

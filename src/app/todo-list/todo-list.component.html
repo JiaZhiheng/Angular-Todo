@@ -1,0 +1,5 @@
+<div class="todo-list" *ngIf="todos.length > 0" #todoList>
+  <app-todo-list-item *ngFor="let todo of todos" [todoItem]="todo" (changeStateEvent)="emitChangeState($event)"
+    (deleteTodoEvent)="emitDeleteTodo($event)" [draggable]="!todo.completed" #todoItems [attr.id]="todo.id.toString()">
+  </app-todo-list-item>
+</div>

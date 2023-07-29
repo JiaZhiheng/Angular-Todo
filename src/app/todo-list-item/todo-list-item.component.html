@@ -1,0 +1,8 @@
+<div class="todo-item" [class.done]="todoItem.completed">
+  <label>
+    <input type="checkbox" [checked]="todoItem.completed" (change)="emitChangeState($event,todoItem.id)" />
+    {{ todoItem.title }}
+    <span class="check-button"></span>
+  </label>
+  <button (click)="emitDeleteTodo($event,todoItem.id)"><i class="delete"></i></button>
+</div>

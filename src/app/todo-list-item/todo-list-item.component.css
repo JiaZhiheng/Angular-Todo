@@ -1,0 +1,83 @@
+.todo-item {
+  background: white;
+  padding: 16px 0px 16px 16px;
+  border-radius: 8px;
+  color: #626262;
+}
+
+.todo-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.todo-item.done {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.todo-item span.check-button {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item span.check-button::before,
+.todo-item span.check-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.todo-item span.check-button::before {
+  border: 1px solid #b382f9;
+}
+
+.todo-item span.check-button::after {
+  transition: 0.4s;
+  background: #b382f9;
+  height: 14px;
+  width: 14px;
+  opacity: 0;
+}
+
+.todo-item input {
+  margin-right: 16px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.todo-item input:checked+span.check-button::after {
+  opacity: 1;
+}
+
+.todo-item button {
+  width: 46px;
+  height: 46px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+.todo-item .delete {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#c0a5f3, #7f95f7), linear-gradient(#c0a5f3, #7f95f7);
+  background-size: 20px 2px, 2px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(45deg);
+}

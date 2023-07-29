@@ -1,0 +1,6 @@
+<div class="input-add">
+  <input type="text" [(ngModel)]="todoContent" (keyup.enter)="emitAddTodo()" />
+  <button (click)="emitAddTodo()">
+    <i class="plus"></i>
+  </button>
+</div>

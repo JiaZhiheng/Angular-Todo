@@ -1,0 +1,6 @@
+<div class="filters">
+  <span class="filter" *ngFor="let filter of filters" [class.active]="selected === filter.value"
+    (click)="useFilteredTodos(filter)">{{
+    filter.label
+    }}</span>
+</div>
